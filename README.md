@@ -17,3 +17,33 @@ Develop an application a simple weather application with 2 components
 1. While design is not critical, having the interface be accessible is crucial
 2. Feel free to overwrite this file when creating your codebase
 3. Be clear how and why you chose your data model for the weather data
+
+### Requirements
+1. Node.js(LTS)
+2. npm
+3. The apps use ports 3000 and 5000 so make sure that no other app is using these ports.
+
+### How to run
+1. Clone the repo
+    ```bash
+    $ git clone https://github.com/kareemadel/interview-challenge
+    ```
+2. Run the API in a shell.
+    ```bash
+    # cd to the API directory
+    $ cd interview-challenge/backend_weather/
+    # install the dependencies
+    $ npm i
+    # Start the app
+    $ npm start
+    ```
+3. Run the React app in a separate shell.
+    ```bash
+    # Go the folder of the react app
+    $ cd interview-challenge/frontend_weather/
+    # install the dependencies
+    $ npm i
+    # start the app
+    $ npm start
+    ```
+4. Visit the app at http://localhost:3000
