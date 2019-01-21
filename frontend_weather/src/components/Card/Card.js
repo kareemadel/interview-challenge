@@ -20,9 +20,9 @@ const card = (props) => {
 };
 
 card.propTypes = {
-  temperature: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired
+  temperature: PropTypes.number.isRequired, // Temperature in Celsius
+  description: PropTypes.string.isRequired, // Weather Description
+  icon: PropTypes.string.isRequired         // Specify which weather icon to use
 };
 
 export default card;

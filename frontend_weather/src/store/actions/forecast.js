@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
 import axios from '../../axios-forecast';
-
+// actions creators for the Forecast container
 export const setForecast = (forecastData) => ({
   type: actionTypes.SET_FORECAST_DATA,
   forecastData

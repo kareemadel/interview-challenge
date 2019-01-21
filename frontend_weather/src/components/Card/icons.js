@@ -2,6 +2,7 @@ import React from 'react';
 
 import classes from './Card.module.css';
 
+// export the weather icons
 export const icons = {
   'shower': (
     <div className={classes.icon}>

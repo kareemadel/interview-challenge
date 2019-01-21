@@ -7,7 +7,6 @@ const initialState = {
 };
 
 const setForecast = (state, action) => {
-
   let forecastData = cloneDeep(action.forecastData);
   forecastData.forEach(d => d.date = new Date(d.date));
   return updateObject(state, { forecastData });

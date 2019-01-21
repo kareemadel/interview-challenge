@@ -16,6 +16,7 @@ const rootReducer = combineReducers({
   forecast: forecastReducer
 });
 
+// add thunk middleware to run async code in the actions
 const store = createStore(rootReducer, composeEnhancers(
   applyMiddleware(thunk)
 ));

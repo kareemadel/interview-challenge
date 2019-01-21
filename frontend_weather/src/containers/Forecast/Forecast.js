@@ -4,7 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 import '../../../node_modules/react-alice-carousel/lib/alice-carousel.css';
 
 import Card from '../../components/Card/Card';
-import * as actions from '../../store/actions/index';
+import * as actionCreators from '../../store/actions/index';
 
 class Forecast extends Component {
   componentDidMount() {
@@ -35,10 +35,10 @@ class Forecast extends Component {
       }
       const carouselProps = {
         mouseDragEnabled: true,
-        items: elements,
-        infinite: false,
-        buttonsDisabled: true,
-        responsive: {
+        items: elements,        // the item array in the carousel
+        infinite: false,        // disable circular carousel
+        buttonsDisabled: true,  // remove next & prev buttons
+        responsive: {           // Configure #items/slide for each device size
           0: { items: 1 },
           400: { items: 2 },
           500: { items: 3 },
@@ -55,11 +55,11 @@ class Forecast extends Component {
 }
 
 const mapStateToProps = state => ({
-  forecast: state.forecast.forecastData,
+  forecast: state.forecast.forecastData,  // array of the forecast data.
 });
 
 const mapDispatchToProps = dispatch => ({
-  onInitForecast: () => dispatch(actions.initForecast()),
+  onInitForecast: () => dispatch(actionCreators.initForecast()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Forecast);
