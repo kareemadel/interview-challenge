@@ -9,6 +9,7 @@ const data = require(join(__dirname, 'sampleData.js'));
 const app = express();
 
 app.get('/forecast', (req, res) => {
+  res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
   res.send(data);
 });
 
